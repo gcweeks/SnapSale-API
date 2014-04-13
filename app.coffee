@@ -144,7 +144,7 @@ app.post "/api/venmo", passportConf.isAuthenticated, passportConf.isAuthorized, 
 app.get "/api/linkedin", passportConf.isAuthenticated, passportConf.isAuthorized, apiController.getLinkedin
 app.get "/mobile/areas", mobileController.getAreas
 app.get "/mobile/listings", mobileController.getListings
-app.post "/mobile/listing", express.multipart, mobileController.postListing
+app.post "/mobile/listing", mobileController.postListing
 app.post "/mobile/listing/buy", mobileController.postBuy
 app.post "/mobile/listing/relist", mobileController.postRelist
 app.post "/mobile/listing/message", mobileController.postMessage
