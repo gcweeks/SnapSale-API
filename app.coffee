@@ -45,7 +45,7 @@ Express configuration.
 hour = 3600000
 day = (hour * 24)
 month = (day * 30)
-app.set "port", process.env.PORT or 3000
+app.set "port", process.env.PORT or 80
 app.set "views", path.join(__dirname, "views")
 app.set "view engine", "jade"
 app.use connectAssets(

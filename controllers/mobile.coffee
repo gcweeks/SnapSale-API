@@ -38,22 +38,19 @@ POST /
 Listing
 ###
 exports.postListing = (req, res) ->
-  User.findById req.body.uid, (err, user) ->
+  listing = new Listing(  
+    uid: 4
+    name: "Gordon Weeks"
+    title: req.body.title
+    description: req.body.description
+    picture: ""
+    messages: []
+    bought: false
+  )
+  listing.save (err) ->
     if err
       res.json return: 0
-    listing = new Listing(
-      uid: req.body.uid
-      uname: user.profile.name
-      title: req.body.title
-      description: req.body.description
-      picture: ""
-      messages: []
-      bought: false
-    )
-    listing.save (err) ->
-      if err
-        res.json return: 0
-      res.json return: 1
+    res.json return: 1
 
 ###
 POST /
