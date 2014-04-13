@@ -1,10 +1,12 @@
 var mongoose = require('mongoose');
 
 var listingSchema = new mongoose.Schema({
+  uid: String,
+  uname: String,
   title: String,
   description: String,
   picture: String,
-  message: Array,
+  messages: Array,
   bought: Boolean
 });
 

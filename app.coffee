@@ -142,6 +142,7 @@ app.get "/api/twitter", passportConf.isAuthenticated, passportConf.isAuthorized,
 app.get "/api/venmo", passportConf.isAuthenticated, passportConf.isAuthorized, apiController.getVenmo
 app.post "/api/venmo", passportConf.isAuthenticated, passportConf.isAuthorized, apiController.postVenmo
 app.get "/api/linkedin", passportConf.isAuthenticated, passportConf.isAuthorized, apiController.getLinkedin
+app.get "/mobile/reset", mobileController.postReset
 app.get "/mobile/areas", mobileController.getAreas
 app.get "/mobile/listings", mobileController.getListings
 app.post "/mobile/listing", mobileController.postListing
